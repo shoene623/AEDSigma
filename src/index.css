@@ -1,38 +1,41 @@
 /* src/index.css */
 
-body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
+/* Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Your custom styles */
+@layer base {
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
 }
 
-.App {
-  text-align: center;
-  padding: 20px;
-}
+@layer components {
+  .App {
+    @apply text-center p-5;
+  }
 
-nav {
-  background-color: #f0f0f0;
-  padding: 10px;
-  margin-bottom: 20px;
-}
+  nav {
+    @apply bg-gray-100 p-3 mb-5;
+  }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-}
+  nav ul {
+    @apply list-none p-0;
+  }
 
-nav li {
-  display: inline;
-  margin-right: 20px;
-}
+  nav li {
+    @apply inline-block mr-5;
+  }
 
-a {
-  text-decoration: none;
-  color: blue;
-}
+  a {
+    @apply no-underline text-blue-600;
+  }
 
-a:hover {
-  text-decoration: underline;
+  a:hover {
+    @apply underline;
+  }
 }
-
